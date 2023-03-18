@@ -35,8 +35,60 @@ const restaurant = {
       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
   },
+  orderPasta(ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`
+    );
+  },
 };
 
+// ⁡⁣⁣⁢SPREAD OPERATOR (...arr)⁡
+
+const arr = [7, 4, 1];
+const glekNewArr = [3, 4, arr[0], arr[1], arr[2]];
+console.log(glekNewArr);
+
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+
+console.log(...arr);
+//same as
+console.log(7, 4, 1);
+
+const newMenu = [...restaurant.mainMenu, 'Gnocchi'];
+console.log(newMenu);
+
+// COPY ARRAY
+const mainMenuCopy = [...restaurant.mainMenu];
+
+// JOIN 2 ARRAYS
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(menu);
+
+const str = 'Goose';
+const letters = [...str, '', 'test'];
+console.log(letters);
+
+const ingredients = [
+  // prompt("Let's make pasta! Ingredient 1?"),
+  // prompt("Let's make pasta! Ingredient 2?"),
+  // prompt("Let's make pasta! Ingredient 3?"),
+];
+console.log(ingredients);
+
+restaurant.orderPasta(...ingredients);
+
+// Objects
+const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
+console.log(newRestaurant);
+
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Ristorante Roma';
+console.log(restaurantCopy.name);
+console.log(restaurant.name);
+
+/*
+//⁡⁣⁣⁢Destructuring objects⁡
 restaurant.orderDelivery({
   time: '22:30',
   address: 'Via del Sole, 21',
@@ -62,7 +114,7 @@ console.log(restaurantName, hours, tags);
 const { menu = [], starterMenu: starters = [] } = restaurant;
 console.log(menu, starters);
 
-//Mutating variables
+//⁡⁣⁣⁢Mutating variables⁡
 let a = 111;
 let b = 999;
 const obj = { a: 77, b: 7, c: 14 };
@@ -80,7 +132,7 @@ console.log(o, c);
 // const b = arr[1];
 // const c = arr[2];
 
-// // Destructuring assignment
+// ⁡⁣⁣// ⁡⁣⁣⁢Destructuring arrays⁡
 // const [x, y, z] = arr;
 // console.log(x, y, z);
 // console.log(arr);
@@ -99,7 +151,7 @@ console.log(o, c);
 // const [starter, mainCourse] = restaurant.order(2, 0);
 // console.log(starter, mainCourse);
 
-// // Nested destructuring
+// // ⁡⁣⁣⁢Nested destructuring⁡
 // const nested = [2, 4, [5, 6]];
 // const [i, , j] = nested;
 // console.log(i, j);
@@ -108,3 +160,4 @@ console.log(o, c);
 
 // const [p = 1, q = 1, r = 1] = [2, 4];
 // console.log(p, q, r);
+*/
