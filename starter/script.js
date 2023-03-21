@@ -45,7 +45,7 @@ const restaurant = {
     console.log(otherIngredients);
   },
 };
-
+/*
 // ! ⁡⁣⁣⁢1) REST Pattern Destructuring⁡
 // ! ⁡⁣⁢⁣SPREAD, because on RIGHT side of =⁡⁡⁡
 const arr = [1, 2, ...[3, 4]];
@@ -86,7 +86,7 @@ add(...x);
 
 restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 restaurant.orderPizza('mushrooms');
-
+*/
 /*
 // !⁡⁣⁣⁢SPREAD OPERATOR (...arr)⁡
 
