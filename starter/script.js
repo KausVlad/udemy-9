@@ -45,40 +45,7 @@ const restaurant = {
     console.log(otherIngredients);
   },
 };
-/*
-//! OR operator will return the first truthy value of all the operands or the last value if all of them are falsy
-console.log('--- OR ---');
-//! Use ANY data type, return ANY data type, short-circuiting
-console.log(3 || 'Vlad');
-console.log('' || 'Vlad');
-console.log(null || 0);
-console.log(undefined || null);
-console.log(undefined || 0 || '' || 'OwO OwO' || 2 || null);
 
-restaurant.numGuests = 42;
-const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
-console.log(guests1);
-
-const guests2 = restaurant.numGuests || 10;
-console.log(guests2);
-
-//! AND operator will return the first falsy value or the last value if all of them are truthy
-console.log('--- AND ---');
-console.log(0 && 'Vlad');
-console.log('' && 'Vlad');
-console.log(5 && 'Vlad');
-
-console.log('wwww' && 44 && null && 'OwO OwO');
-console.log(55 && 'Vlad' && true && 'OwO OwO');
-
-// Practical example
-
-if (restaurant.orderPizza) {
-  restaurant.orderPizza('mushrooms', 'onion', 'olives');
-}
-
-restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'onion', 'olives');
-*/
 /*
 // ! ⁡⁣⁣⁢1) REST Pattern Destructuring⁡
 // ! ⁡⁣⁢⁣SPREAD, because on RIGHT side of =⁡⁡⁡
