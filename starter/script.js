@@ -46,11 +46,11 @@ const restaurant = {
   },
 };
 
-// ⁡⁣⁣⁢1) REST Pattern Destructuring⁡
-// ⁡⁣⁢⁣SPREAD, because on RIGHT side of =⁡⁡⁡
+// ! ⁡⁣⁣⁢1) REST Pattern Destructuring⁡
+// ! ⁡⁣⁢⁣SPREAD, because on RIGHT side of =⁡⁡⁡
 const arr = [1, 2, ...[3, 4]];
 
-// ⁡⁢⁣⁡⁣⁢⁣REST, because on LEFT side of =⁡⁡
+// ! ⁡⁢⁣⁡⁣⁢⁣REST, because on LEFT side of =⁡⁡
 const [a, b, ...others] = [1, 2, 3, 4, 5];
 console.log(a, b, others);
 
@@ -66,7 +66,7 @@ const { sat, ...weekdays } = restaurant.openingHours;
 
 console.log(sat, weekdays);
 
-// ⁡⁣⁣⁢2) Functions REST parameters
+// ! ⁡⁣⁣⁢2) Functions REST parameters
 
 const add = function (...numbers) {
   console.log(numbers);
@@ -88,7 +88,7 @@ restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 restaurant.orderPizza('mushrooms');
 
 /*
-// ⁡⁣⁣⁢SPREAD OPERATOR (...arr)⁡
+// !⁡⁣⁣⁢SPREAD OPERATOR (...arr)⁡
 
 const arr = [7, 4, 1];
 const glekNewArr = [3, 4, arr[0], arr[1], arr[2]];
@@ -104,10 +104,10 @@ console.log(7, 4, 1);
 const newMenu = [...restaurant.mainMenu, 'Gnocchi'];
 console.log(newMenu);
 
-// COPY ARRAY
+// !COPY ARRAY
 const mainMenuCopy = [...restaurant.mainMenu];
 
-// JOIN 2 ARRAYS
+// !JOIN 2 ARRAYS
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 console.log(menu);
 
@@ -134,7 +134,7 @@ console.log(restaurantCopy.name);
 console.log(restaurant.name);
 */
 /*
-//⁡⁣⁣⁢Destructuring objects⁡
+//!⁡⁣⁣ ⁢Destructuring objects⁡
 restaurant.orderDelivery({
   time: '22:30',
   address: 'Via del Sole, 21',
@@ -160,14 +160,14 @@ console.log(restaurantName, hours, tags);
 const { menu = [], starterMenu: starters = [] } = restaurant;
 console.log(menu, starters);
 
-//⁡⁣⁣⁢Mutating variables⁡
+//! ⁡⁣⁢Mutating variables⁡
 let a = 111;
 let b = 999;
 const obj = { a: 77, b: 7, c: 14 };
 ({ a, b } = obj);
 console.log(a, b);
 
-//Nested objects
+//! Nested objects
 const {
   fri: { open: o, close: c },
 } = openingHours;
@@ -178,7 +178,7 @@ console.log(o, c);
 // const b = arr[1];
 // const c = arr[2];
 
-// ⁡⁣⁣// ⁡⁣⁣⁢Destructuring arrays⁡
+// ⁡⁣⁣//! ⁡⁣⁣⁢Destructuring arrays⁡
 // const [x, y, z] = arr;
 // console.log(x, y, z);
 // console.log(arr);
@@ -197,7 +197,7 @@ console.log(o, c);
 // const [starter, mainCourse] = restaurant.order(2, 0);
 // console.log(starter, mainCourse);
 
-// // ⁡⁣⁣⁢Nested destructuring⁡
+// //! ⁡⁣⁣⁢Nested destructuring⁡
 // const nested = [2, 4, [5, 6]];
 // const [i, , j] = nested;
 // console.log(i, j);
