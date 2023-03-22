@@ -46,6 +46,17 @@ const restaurant = {
   },
 };
 
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+for (const iterator of menu) console.log(iterator);
+
+//!! entries() important staff
+for (const [i, el] of menu.entries()) {
+  console.log(`${i + 1}: ${el}`);
+  // console.log(`${iterator[0] + 1}: ${iterator[1]}`);
+}
+
+console.log([...menu.entries()]);
 /*
 // ! ⁡⁣⁣⁢1) REST Pattern Destructuring⁡
 // ! ⁡⁣⁢⁣SPREAD, because on RIGHT side of =⁡⁡⁡
