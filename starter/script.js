@@ -13,7 +13,7 @@ const openingHours = {
     open: 12,
     close: 22,
   },
-  [weekdays[4]]: {
+  fri: {
     open: 11,
     close: 23,
   },
@@ -53,13 +53,41 @@ const restaurant = {
   },
 };
 
+if (restaurant.openingHours.mon) {
+  console.log(restaurant.openingHours.mon.open);
+}
+// console.log(restaurant.openingHours.mon.open); //Error Cannot read property 'mon' of undefined
+
+//! WITH optional chaining (?.)
+console.log(restaurant.openingHours?.mon?.open);
+
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+for (const day of days) {
+  console.log(day);
+  const open = restaurant.openingHours[day]?.open ?? 'Closed'; //! Use Nullish Coalescing Operator (??) and optional chaining (?.)
+  console.log(`On ${day}, open at ${open}`);
+}
+
+//* Methods
+console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
+console.log(restaurant.orderSS?.(0, 1) ?? 'Method does not exist'); // Method does not exist
+
+//* Arrays
+const users = [
+  { name: 'Vas', age: 22 },
+  { name: 'Po', age: 3 },
+];
+
+console.log(users[2]?.name ?? 'User array empty');
+
 /*
-//! For of loop
+//$ For of loop
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
 for (const iterator of menu) console.log(iterator);
 
-//!!  entries() important staff
+//$  entries() important staff 
 for (const [i, el] of menu.entries()) {
   console.log(`${i + 1}: ${el}`);
   // console.log(`${iterator[0] + 1}: ${iterator[1]}`);
