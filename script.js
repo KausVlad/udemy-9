@@ -53,6 +53,98 @@ const restaurant = {
   },
 };
 
+// !Sets and Maps
+//$ Sets are used to store UNIQUE!!! values
+//* Maps are used to store key-value pairs
+
+// !Sets
+
+const orderSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Risotto',
+  'Pasta',
+  'Pizza',
+]);
+
+console.log(orderSet);
+
+console.log(new Set('hello'));
+
+console.log(orderSet.size); //similar to length property of arrays but returns number of unique elements
+
+console.log(orderSet.has('Pizza')); //Similar to includes() method of arrays but for sets
+console.log(orderSet.has('Bread'));
+
+orderSet.add('Garlic Bread'); //similar to push() method of arrays
+orderSet.add('Garlic Bread');
+
+console.log(orderSet);
+
+orderSet.delete('Pizza'); //similar to pop() method of arrays
+
+console.log(orderSet);
+
+for (const iterator of orderSet) console.log(iterator);
+
+// orderSet.clear();
+// console.log(orderSet);
+
+//Use cases of sets Example
+
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+const uniqueStaff = [...new Set(staff)];
+console.log(uniqueStaff);
+
+console.log(new Set("Vladislav it's me").size);
+
+//////////////////////////////$///////////////////
+console.log('__!SETS!___↑______');
+//////////////////////////////$///////////////////
+
+//! Maps
+
+const rest = new Map();
+
+rest.set('name', 'Classico Italiano');
+rest.set(1, 'Firenze, Italy');
+console.log(rest.set(2, 'Lisbon, Portugal'));
+
+rest
+  .set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
+  .set('open', 11)
+  .set('close', 23)
+  .set(true, 'We are open!')
+  .set(false, 'We are closed!');
+
+console.log(rest);
+
+console.log(rest.get(true)); // Метод .get() для Map в JavaScript дозволяє отримати значення з Map за ключем.
+
+const time = 3;
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+console.log(rest.has('categories')); // Метод .has() дозволяє перевіряти наявність ключа в Map.
+
+rest.delete(2); // Метод .delete() дозволяє удаляти значення з Map за ключем.
+
+console.log(rest.size); // Метод .size() дозволяє повернути кількість ключів в Map.
+// console.log(rest.clear()); // Метод .clear() дозволяє очистити значення з Map.
+
+const arr = [1, 2];
+rest.set(arr, 'LOL');
+rest.set([1, 2], 'Test');
+rest.set(document.querySelector('h1'), 'Heading'); // Можна використовувати dom елемент як ключ
+
+console.log(rest);
+
+console.log(rest.get(arr)); // Undefined
+
+//////////////////////////////$///////////////////
+console.log('__!MAPS!___↑______');
+//////////////////////////////$///////////////////
+/*
 //! Looping Objects_ Object Keys, Values, and Entries
 //! Objects.keys()
 //* Property NAMES
@@ -78,7 +170,11 @@ console.log(entries);
 
 for (const [key, { open, close }] of entries) {
   console.log(`On ${key} we open at ${open} and close at ${close}`);
-}
+*/
+
+//////////////////////////////$///////////////////
+//////////////////////////////$///////////////////
+
 /*
 if (restaurant.openingHours.mon) {
   console.log(restaurant.openingHours.mon.open);
@@ -108,6 +204,10 @@ const users = [
 
 console.log(users[2]?.name ?? 'User array empty');
 */
+
+//////////////////////////////$///////////////////
+//////////////////////////////$///////////////////
+
 /*
 //$ For of loop
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
@@ -122,6 +222,10 @@ for (const [i, el] of menu.entries()) {
 
 console.log([...menu.entries()]);
 */
+
+//////////////////////////////$///////////////////
+//////////////////////////////$///////////////////
+
 /*
 // ! ⁡⁣⁣⁢1) REST Pattern Destructuring⁡
 // ! ⁡⁣⁢⁣SPREAD, because on RIGHT side of =⁡⁡⁡
@@ -164,6 +268,10 @@ add(...x);
 restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 restaurant.orderPizza('mushrooms');
 */
+
+//////////////////////////////$///////////////////
+//////////////////////////////$///////////////////
+
 /*
 // !⁡⁣⁣⁢SPREAD OPERATOR (...arr)⁡
 
@@ -210,6 +318,10 @@ restaurantCopy.name = 'Ristorante Roma';
 console.log(restaurantCopy.name);
 console.log(restaurant.name);
 */
+
+//////////////////////////////$///////////////////
+//////////////////////////////$///////////////////
+
 /*
 //!⁡⁣⁣ ⁢Destructuring objects⁡
 restaurant.orderDelivery({
