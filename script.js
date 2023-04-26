@@ -53,6 +53,11 @@ const restaurant = {
   },
 };
 
+//////////////////////////////$///////////////////
+console.log('______↑______');
+console.log('__!MAPS!_Resume_↓______');
+//////////////////////////////$///////////////////
+/*
 //!MAPS!_Resume
 
 const questions = new Map([
@@ -92,11 +97,12 @@ console.log([...questions.keys()]);
 console.log([...questions.values()]);
 console.log(questions.entries());
 
+
 //////////////////////////////$///////////////////
 console.log('__!MAPS!_Resume____↑______');
 console.log('__!MAPS!___↓______');
 //////////////////////////////$///////////////////
-
+*/
 /*
 //! Maps
 
