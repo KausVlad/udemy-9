@@ -53,6 +53,95 @@ const restaurant = {
   },
 };
 
+//!MAPS!_Resume
+
+const questions = new Map([
+  ['question', 'What is the best programming language in the world?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'JavaScript'],
+  ['correct', 3],
+  [true, 'Correct'],
+  [false, 'Try again'],
+]);
+
+console.log(questions);
+
+//* Converting object to map
+console.log(Object.entries(openingHours));
+
+const hoursMap = new Map(Object.entries(openingHours));
+
+console.log(hoursMap);
+
+// task
+
+console.log(questions.get('question'));
+for (const [key, value] of questions) {
+  typeof key === 'number' && console.log(`Answer ${key}: ${value}`);
+}
+// const answer = Number(prompt('Your answer'));
+const answer = 3;
+
+console.log(questions.get(questions.get('correct') === answer));
+
+//* convert map to array
+
+console.log([...questions]);
+console.log([...questions.keys()]);
+console.log([...questions.values()]);
+console.log(questions.entries());
+
+//////////////////////////////$///////////////////
+console.log('__!MAPS!_Resume____↑______');
+console.log('__!MAPS!___↓______');
+//////////////////////////////$///////////////////
+
+/*
+//! Maps
+
+const rest = new Map();
+
+rest.set('name', 'Classico Italiano');
+rest.set(1, 'Firenze, Italy');
+console.log(rest.set(2, 'Lisbon, Portugal'));
+
+rest
+  .set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
+  .set('open', 11)
+  .set('close', 23)
+  .set(true, 'We are open!')
+  .set(false, 'We are closed!');
+
+console.log(rest);
+
+console.log(rest.get(true)); // Метод .get() для Map в JavaScript дозволяє отримати значення з Map за ключем.
+
+const time = 3;
+console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+console.log(rest.has('categories')); // Метод .has() дозволяє перевіряти наявність ключа в Map.
+
+rest.delete(2); // Метод .delete() дозволяє удаляти значення з Map за ключем.
+
+console.log(rest.size); // Метод .size() дозволяє повернути кількість ключів в Map.
+// console.log(rest.clear()); // Метод .clear() дозволяє очистити значення з Map.
+
+const arr = [1, 2];
+rest.set(arr, 'LOL');
+rest.set([1, 2], 'Test');
+rest.set(document.querySelector('h1'), 'Heading'); // Можна використовувати dom елемент як ключ
+
+console.log(rest);
+
+console.log(rest.get(arr)); // Undefined
+
+//////////////////////////////$///////////////////
+console.log('__!MAPS!___↑______');
+console.log('__!SETS!___↓______');
+//////////////////////////////$///////////////////
+*/
+/*
 // !Sets and Maps
 //$ Sets are used to store UNIQUE!!! values
 //* Maps are used to store key-value pairs
@@ -102,48 +191,7 @@ console.log(new Set("Vladislav it's me").size);
 //////////////////////////////$///////////////////
 console.log('__!SETS!___↑______');
 //////////////////////////////$///////////////////
-
-//! Maps
-
-const rest = new Map();
-
-rest.set('name', 'Classico Italiano');
-rest.set(1, 'Firenze, Italy');
-console.log(rest.set(2, 'Lisbon, Portugal'));
-
-rest
-  .set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
-  .set('open', 11)
-  .set('close', 23)
-  .set(true, 'We are open!')
-  .set(false, 'We are closed!');
-
-console.log(rest);
-
-console.log(rest.get(true)); // Метод .get() для Map в JavaScript дозволяє отримати значення з Map за ключем.
-
-const time = 3;
-console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
-
-console.log(rest.has('categories')); // Метод .has() дозволяє перевіряти наявність ключа в Map.
-
-rest.delete(2); // Метод .delete() дозволяє удаляти значення з Map за ключем.
-
-console.log(rest.size); // Метод .size() дозволяє повернути кількість ключів в Map.
-// console.log(rest.clear()); // Метод .clear() дозволяє очистити значення з Map.
-
-const arr = [1, 2];
-rest.set(arr, 'LOL');
-rest.set([1, 2], 'Test');
-rest.set(document.querySelector('h1'), 'Heading'); // Можна використовувати dom елемент як ключ
-
-console.log(rest);
-
-console.log(rest.get(arr)); // Undefined
-
-//////////////////////////////$///////////////////
-console.log('__!MAPS!___↑______');
-//////////////////////////////$///////////////////
+*/
 /*
 //! Looping Objects_ Object Keys, Values, and Entries
 //! Objects.keys()
