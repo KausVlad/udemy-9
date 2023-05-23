@@ -2,6 +2,52 @@
 const airline = 'TAB Air Galaxy';
 const plane = 'A320';
 
+const passenger = 'voLiSsS'; // Volisss
+const passengerLower = passenger.toLowerCase();
+
+const newPassenger = passengerLower[0].toUpperCase() + passengerLower.slice(1);
+
+console.log(newPassenger);
+
+// Comparing email
+
+const email = 'yv9oW@example.com';
+const loginEmail = '   Yv9oW@example.cOm   \n';
+
+console.log(loginEmail);
+
+const normalizedEmail = loginEmail.toLowerCase().trim();
+
+console.log(normalizedEmail);
+
+// Replacing
+
+const priceGB = '400,33£';
+const priceUS = priceGB.replace('£', '$').replace(',', '.');
+
+console.log(priceUS);
+
+const announcement =
+  'All passengers come to boarding door 23. Boarding door 23!';
+
+console.log(announcement.replaceAll('door', 'gate'));
+
+console.log(announcement.replace(/door/g, 'gate')); // regular expression /g means global
+
+// booleans
+
+const planeX = 'Airbus A320neo';
+console.log(planeX.includes('neo'));
+console.log(planeX.startsWith('Air'));
+
+if (planeX.startsWith('Airbus') && planeX.endsWith('neo')) {
+  console.log('I am flying with Airbus A320neo');
+} else {
+  console.log('Sorry, I am not flying with this plane');
+}
+
+/*
+
 console.log(plane[0]);
 console.log(plane[1]);
 console.log(plane[2]);
@@ -36,3 +82,5 @@ checkMiddleSeat('11B');
 checkMiddleSeat('15c');
 checkMiddleSeat('13a');
 checkMiddleSeat('23E');
+
+*/
