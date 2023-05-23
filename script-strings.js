@@ -1,4 +1,65 @@
 'use strict';
+
+// split and join
+
+console.log('a+veree+qwqe+qw'.split('+'));
+
+const [firstName, lastName] = 'Vladik Shk'.split(' ');
+console.log(firstName, lastName);
+
+const newName = ['Mr', firstName, lastName.toUpperCase()].join('___');
+console.log(newName);
+
+const capitalizeName = (name) => {
+  const names = name.split(' ');
+  const namesUpper = [];
+
+  for (const n of names) {
+    // namesUpper.push(n[0].toUpperCase() + n.slice(1));
+    namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
+  }
+
+  console.log(namesUpper.join(' '));
+};
+
+const passenger = 'vlados shk';
+
+capitalizeName(passenger);
+
+//!padding
+const message = 'Go to gate 23!';
+console.log(message.padStart(25, '+'));
+console.log('ViVi'.padStart(5, '+'));
+console.log('ViVi'.padEnd(15, '+'));
+
+const maskCreditCard = (number) => {
+  const str = number.toString(); // or number + '';
+  const last = str.slice(-4);
+  return last.padStart(str.length, '*');
+};
+
+console.log(
+  maskCreditCard(1234567890123456),
+  maskCreditCard(3453457889930482),
+  maskCreditCard('4567890123456789')
+);
+
+// !repeat
+
+const message2 = 'Bat weather... All Departures are delayed...';
+
+console.log(message2.repeat(5));
+
+const planesLine = (n) => {
+  console.log(
+    `There are ${n} ${n === 1 ? 'plane' : 'planes'} in line ${'✈'.repeat(n)}`
+  );
+};
+
+planesLine(5);
+planesLine(1);
+
+/*
 const airline = 'TAB Air Galaxy';
 const plane = 'A320';
 
@@ -45,6 +106,8 @@ if (planeX.startsWith('Airbus') && planeX.endsWith('neo')) {
 } else {
   console.log('Sorry, I am not flying with this plane');
 }
+
+*/
 
 /*
 
